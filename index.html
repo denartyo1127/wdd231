@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dennis Guevara's homepage for WDD231 - Frontend Development I.">
+  <meta name="author" content="Dennis Arturo Guevara Chete">
+  <title>Home Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script defer src="scripts/Home.js"></script>
+</head>
+<body>
+  <header>
+    <!-- Site logo (SVG) + name in span + hamburger icon for small screens -->
+    <div class="branding">
+      <img src="images/logo.svg" alt="Site Logo" class="logo">
+      <span>Dennis Arturo Guevara Chete</span>
+    </div>
+    <button id="menuBtn" aria-label="Toggle Navigation">&#9776;</button>
+  </header>
+
+  <nav id="mainNav" class="navigation">
+    <a href="index.html">Home</a>
+    <a href="https://your-chamber-site-url.com">Chamber</a>
+    <a href="https://your-final-project-url.com">Final</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <section id="certificate">
+  <h2>Certificate Courses</h2>
+  <div class="filters">
+    <button id="all">All Courses</button>
+    <button id="wdd">WDD Courses</button>
+    <button id="cse">CSE Courses</button>
+  </div>
+  <div id="courses"></div>
+  <p>Total Credits: <span id="creditTotal">0</span></p>
+</section>
+    <section>
+      <h2>About Me</h2>
+      <p>Welcome! I'm Dennis, a frontend developer in training with a passion for clean code and responsive design.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p>Check out my Chamber of Commerce site and my final project using best practices in HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Reach me on GitHub or LinkedIn. Let’s connect and collaborate!</p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Social media icons (can use simple <img> or <i> if using icon font) -->
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="images/github.svg" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank">
+        <img src="images/twitter.svg" alt="Twitter">
+      </a>
+    </div>
+
+    <!-- Dynamic year + name + location -->
+    <p>&copy; <span id="currentyear"></span> Dennis Arturo Guevara Chete | New Jersey, USA</p>
+
+    <!-- Last modified -->
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
