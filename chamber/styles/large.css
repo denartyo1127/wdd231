@@ -1,0 +1,43 @@
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+    /* Directory specific styles for larger screens */
+    #member-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    #member-cards-container.grid-view .member-card {
+        display: block; /* Ensure cards are visible in grid view */
+    }
+
+    #member-cards-container.grid-view .member-list-item {
+        display: none; /* Hide list items in grid view */
+    }
+
+    #member-cards-container.list-view {
+        grid-template-columns: 1fr; /* Force single column for list view on large screens */
+    }
+
+    #member-cards-container.list-view .member-list-item {
+        display: block;
+        /* Additional styling for list view on large screens if needed */
+        border: 1px solid #eee;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        margin-bottom: 1rem; /* Space between list items */
+    }
+
+    /* Adjust specific styles for .member-card and .member-list-item for desktop */
+    .member-card {
+        text-align: center;
+    }
+
+    .member-list-item {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+}

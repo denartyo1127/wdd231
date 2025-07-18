@@ -1,0 +1,110 @@
+/* General styles for the directory main */
+.directory-main {
+    padding: 1rem;
+}
+
+/* View Toggles */
+.view-toggles {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggles button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.view-toggles button.active {
+    background-color: #007bff; /* Example active color */
+    color: white;
+    border-color: #007bff;
+}
+
+/* Member Cards Container - Default for small screens (list-like) */
+#member-cards-container {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem; /* Space between members */
+}
+
+/* Styles for individual member items (list view default on small) */
+.member-card, .member-list-item {
+    border: 1px solid #eee;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center; /* Default for card view */
+}
+
+.member-list-item {
+    text-align: left; /* Override for list view */
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+}
+
+.member-card h3, .member-list-item h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.member-card p, .member-list-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+}
+
+.member-card a, .member-list-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.member-card a:hover, .member-list-item a:hover {
+    text-decoration: underline;
+}
+
+.membership-level {
+    font-weight: bold;
+    color: #28a745; /* Example color for emphasis */
+}
+
+.description {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Specific styles for .list-view when active */
+#member-cards-container.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+#member-cards-container.list-view .member-card { /* Hide card specific elements if any */
+    display: none; /* or adjust display for list */
+}
+
+#member-cards-container.list-view .member-list-item {
+    display: block; /* Ensure list item is shown */
+    border-bottom: 1px dashed #ddd; /* Separator for list items */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#member-cards-container.list-view .member-list-item:last-child {
+    border-bottom: none;
+}

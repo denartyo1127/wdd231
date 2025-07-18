@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directory | Chamber of Commerce</title>
+    <meta name="description" content="Dennis Guevara's directory for WDD231 - Frontend Development I.">
+    <meta name="author" content="Dennis Arturo Guevara Chete">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description" content="Connect with local businesses in the Chamber of Commerce directory.">
+    <meta property="og:image" content="https://denartyo1127.github.io/wdd231/images/logo.svg">
+    <meta property="og:url" content="https://denartyo1127.github.io/wdd231/index.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer src="scripts/directory.js"></script>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" width="100" height="auto"> </a>
+            <h1>Chamber of Commerce</h1>
+            <nav class="social-media">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook" width="24" height="24"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="24" height="24"></a>
+                </nav>
+        </div>
+        </header>
+
+    <nav class="main-nav">
+        <button id="hamburger-menu" aria-label="Toggle Navigation">☰</button>
+        <ul id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li class="active"><a href="directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+    </nav>
+
+    <main class="directory-main">
+        <h2>Chamber Member Directory</h2>
+
+        <div class="view-toggles">
+            <button id="grid-view-btn" class="active">Grid View</button>
+            <button id="list-view-btn">List View</button>
+        </div>
+
+        <section id="member-cards-container" class="grid-view">
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Dennis Arturo Guevara Chete | New Jersey, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
