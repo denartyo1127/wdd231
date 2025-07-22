@@ -18,6 +18,7 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Added transition */
 }
 
 .view-toggles button.active {
@@ -39,13 +40,13 @@
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-radius: 8px; /* Consistent rounded corners */
     text-align: center; /* Default for card view */
 }
 
 .member-list-item {
     text-align: left; /* Override for list view */
-    display: flex;
+    display: flex; /* Ensure it's a flex container for internal layout if needed */
     flex-direction: column;
 }
 
@@ -53,7 +54,7 @@
     max-width: 100px; /* Adjust as needed */
     height: auto;
     margin-bottom: 0.8rem;
-    border-radius: 5px;
+    border-radius: 5px; /* Consistent rounded corners */
 }
 
 .member-card h3, .member-list-item h3 {
@@ -94,8 +95,8 @@
     flex-direction: column;
 }
 
-#member-cards-container.list-view .member-card { /* Hide card specific elements if any */
-    display: none; /* or adjust display for list */
+#member-cards-container.list-view .member-card {
+    display: none; /* Hide card specific elements when list view is active */
 }
 
 #member-cards-container.list-view .member-list-item {
@@ -107,4 +108,251 @@
 
 #member-cards-container.list-view .member-list-item:last-child {
     border-bottom: none;
+}
+
+/* General / Common Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Ensure consistent font */
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.logo-link img {
+    border-radius: 50%; /* Make logo round if desired */
+    /* You might want to remove this if your logo is not round */
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+.social-media img {
+    border-radius: 0; /* Social icons usually aren't rounded */
+}
+
+.main-nav {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default for mobile */
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-nav ul.open {
+    display: flex; /* Show when hamburger is active */
+}
+
+.main-nav ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover, .main-nav ul li.active a {
+    background-color: #0056b3;
+}
+
+#hamburger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block; /* Show hamburger on small screens */
+    padding: 0.5rem;
+    width: 100%; /* Make button full width for easier tapping */
+    text-align: right;
+}
+
+main {
+    padding: 1rem;
+    margin-top: 1rem; /* Space below navigation */
+}
+
+/* New Homepage specific styles for smaller screens */
+.home-main {
+    padding: 1rem;
+    margin-top: 1rem; /* Space below navigation */
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px; /* Consistent rounded corners */
+    margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+    font-size: 2em; /* Adjust font size for mobile */
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Consistent rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.events-and-news, .spotlights, .call-to-action, .weather-section { /* Added weather-section */
+    margin-bottom: 2rem;
+}
+
+.event-card, .spotlight-card {
+    border: 1px solid #eee;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Consistent rounded corners */
+    text-align: center;
+    margin-bottom: 1rem; /* Space between cards */
+}
+
+.spotlight-card img {
+    max-width: 80px; /* Smaller image for mobile spotlight */
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 5px; /* Consistent rounded corners */
+}
+
+.spotlight-card h4, .event-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.3rem;
+}
+
+.learn-more, .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.learn-more:hover, .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Weather Section Styles */
+.weather-section {
+    background-color: #e6f7ff; /* Light blue background */
+    border: 1px solid #b3e0ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-section h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.current-weather {
+    margin-bottom: 1rem;
+}
+
+.current-weather h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.current-weather img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    border-radius: 0; /* Weather icons usually not rounded */
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+}
+
+.forecast-day {
+    flex: 1 1 30%; /* Allow flexibility but try to keep 3 in a row */
+    min-width: 80px; /* Minimum width for each forecast day */
+    text-align: center;
+    background-color: #f0faff;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #cceeff;
+}
+
+.forecast-day img {
+    border-radius: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0.3rem 0;
 }

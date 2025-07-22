@@ -1,4 +1,49 @@
 @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    /* General / Common Styles for larger screens */
+    header .header-content {
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.5em; /* Larger heading for desktop */
+    }
+
+    .main-nav {
+        padding: 0; /* Remove padding from nav container for full width ul */
+    }
+
+    .main-nav ul {
+        display: flex; /* Make navigation horizontal */
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: row; /* Ensure horizontal alignment */
+    }
+
+    .main-nav ul li {
+        border-bottom: none; /* Remove bottom border for horizontal menu */
+    }
+
+    .main-nav ul li a {
+        padding: 1rem 1.5rem;
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    main {
+        max-width: 1200px; /* Constrain content width */
+        margin: 2rem auto; /* Center content */
+        padding: 0 1rem;
+    }
+
     /* Directory specific styles for larger screens */
     #member-cards-container {
         display: grid;
@@ -9,6 +54,7 @@
 
     #member-cards-container.grid-view .member-card {
         display: block; /* Ensure cards are visible in grid view */
+        text-align: center;
     }
 
     #member-cards-container.grid-view .member-list-item {
@@ -20,24 +66,107 @@
     }
 
     #member-cards-container.list-view .member-list-item {
-        display: block;
-        /* Additional styling for list view on large screens if needed */
+        display: flex; /* Use flex for list items on large screens for better alignment */
+        flex-direction: row; /* Arrange content horizontally */
+        align-items: center; /* Vertically align content */
+        justify-content: space-between; /* Space out content */
         border: 1px solid #eee;
         padding: 1rem;
         background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         border-radius: 8px;
         margin-bottom: 1rem; /* Space between list items */
+        text-align: left; /* Ensure text alignment is left */
+        gap: 1rem; /* Space between flex items */
     }
 
     /* Adjust specific styles for .member-card and .member-list-item for desktop */
-    .member-card {
+    .member-list-item h3 {
+        flex-basis: 20%; /* Give name some space */
+    }
+    .member-list-item p {
+        flex-basis: auto; /* Let other paragraphs take natural space */
+        margin-bottom: 0; /* Reduce margin for horizontal layout */
+    }
+    .member-list-item a {
+        white-space: nowrap; /* Prevent website link from breaking */
+    }
+
+    /* Homepage specific styles for larger screens */
+    .home-main {
+        max-width: 1200px; /* Constrain content width */
+        margin: 2rem auto; /* Center content */
+        padding: 0 1rem;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-width: 30%; /* Adjust image size */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .hero-text {
+        flex: 1;
+        padding: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.8em; /* Larger heading */
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1em;
+    }
+
+    .spotlight-grid, .event-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .event-card, .spotlight-card {
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         text-align: center;
     }
 
-    .member-list-item {
-        text-align: left;
+    /* Weather Section Styles for larger screens */
+    .weather-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .weather-section #weather-display {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .current-weather {
+        flex: 1;
+        text-align: center;
+    }
+    .forecast-container {
+        flex: 2; /* Give more space to forecast */
+        justify-content: space-around;
+        gap: 1rem;
     }
 }
