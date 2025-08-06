@@ -1,32 +1,31 @@
-@media (min-width: 768px) { /* Adjust breakpoint as needed */
-    /* General / Common Styles for larger screens */
+@media (min-width: 768px) { 
     header .header-content {
         display: flex;
-        flex-direction: row; /* Align items horizontally */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
     }
 
     .header-content h1 {
-        font-size: 2.5em; /* Larger heading for desktop */
+        font-size: 2.5em;
     }
 
     .main-nav {
-        padding: 0; /* Remove padding from nav container for full width ul */
+        padding: 0;
     }
 
     .main-nav ul {
-        display: flex; /* Make navigation horizontal */
+        display: flex;
         justify-content: center;
         list-style: none;
         padding: 0;
         margin: 0;
-        flex-direction: row; /* Ensure horizontal alignment */
+        flex-direction: row;
     }
 
     .main-nav ul li {
-        border-bottom: none; /* Remove bottom border for horizontal menu */
+        border-bottom: none;
     }
 
     .main-nav ul li a {
@@ -35,67 +34,78 @@
     }
 
     #hamburger-menu {
-        display: none; /* Hide hamburger on larger screens */
+        display: none;
     }
 
     main {
-        max-width: 1200px; /* Constrain content width */
-        margin: 2rem auto; /* Center content */
+        max-width: 1200px;
+        margin: 2rem auto;
         padding: 0 1rem;
     }
 
-    /* Directory specific styles for larger screens */
+    /* Directory layout */
     #member-cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
         justify-content: center;
     }
 
     #member-cards-container.grid-view .member-card {
-        display: block; /* Ensure cards are visible in grid view */
+        display: block;
         text-align: center;
     }
 
     #member-cards-container.grid-view .member-list-item {
-        display: none; /* Hide list items in grid view */
+        display: none;
     }
 
     #member-cards-container.list-view {
-        grid-template-columns: 1fr; /* Force single column for list view on large screens */
+        grid-template-columns: 1fr;
     }
 
     #member-cards-container.list-view .member-list-item {
-        display: flex; /* Use flex for list items on large screens for better alignment */
-        flex-direction: row; /* Arrange content horizontally */
-        align-items: center; /* Vertically align content */
-        justify-content: space-between; /* Space out content */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         border: 1px solid #eee;
         padding: 1rem;
         background-color: #fff;
         box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         border-radius: 8px;
-        margin-bottom: 1rem; /* Space between list items */
-        text-align: left; /* Ensure text alignment is left */
-        gap: 1rem; /* Space between flex items */
+        margin-bottom: 1rem;
+        text-align: left;
+        gap: 1rem;
     }
 
-    /* Adjust specific styles for .member-card and .member-list-item for desktop */
     .member-list-item h3 {
-        flex-basis: 20%; /* Give name some space */
+        flex-basis: 20%;
     }
     .member-list-item p {
-        flex-basis: auto; /* Let other paragraphs take natural space */
-        margin-bottom: 0; /* Reduce margin for horizontal layout */
+        flex-basis: auto;
+        margin-bottom: 0;
     }
     .member-list-item a {
-        white-space: nowrap; /* Prevent website link from breaking */
+        white-space: nowrap;
     }
 
-    /* Homepage specific styles for larger screens */
+    /* Membership form on larger screens */
+    .membership-form-section form fieldset {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Membership cards layout upgrade for large screens */
+    .membership-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Homepage */
     .home-main {
-        max-width: 1200px; /* Constrain content width */
-        margin: 2rem auto; /* Center content */
+        max-width: 1200px;
+        margin: 2rem auto;
         padding: 0 1rem;
     }
 
@@ -108,7 +118,7 @@
 
     .hero-image {
         flex: 1;
-        max-width: 30%; /* Adjust image size */
+        max-width: 30%;
         height: auto;
         border-radius: 8px;
     }
@@ -119,7 +129,7 @@
     }
 
     .hero h2 {
-        font-size: 2.8em; /* Larger heading */
+        font-size: 2.8em;
         margin-bottom: 0.5rem;
     }
 
@@ -147,7 +157,6 @@
         text-align: center;
     }
 
-    /* Weather Section Styles for larger screens */
     .weather-section {
         display: flex;
         flex-direction: column;
@@ -165,7 +174,7 @@
         text-align: center;
     }
     .forecast-container {
-        flex: 2; /* Give more space to forecast */
+        flex: 2;
         justify-content: space-around;
         gap: 1rem;
     }
