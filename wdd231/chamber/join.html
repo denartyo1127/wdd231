@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join The Chamber of Commerce - Membership Application</title>
+  <meta name="description" content="Apply for membership with the Anytown Chamber of Commerce to gain access to exclusive events, resources, and business support.">
+  <meta name="author" content="Dennis Arturo Guevara Chete">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Join the Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership and access benefits.">
+  <meta property="og:image" content="https://denartyo1127.github.io/wdd231/chamber/images/logo.svg">
+  <meta property="og:url" content="https://denartyo1127.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" width="100" height="50" alt="Chamber of Commerce Logo">
+      </a>
+      <nav class="social-media">
+        <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook icon" width="50" height="50"></a>
+        <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter icon" width="50" height="50"></a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button id="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+    <ul id="primary-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li class="active"><a href="join.html">Join</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="join-main">
+    <h1>Join The Chamber of Commerce - Membership Application</h1>
+    <section class="membership-form-section">
+      <h2>Join The Chamber</h2>
+      <p>Fill out the form below to apply for membership with the Anytown Chamber of Commerce.</p>
+
+      <form method="get" action="thankyou.html" novalidate>
+
+        <fieldset>
+          <legend>Applicant Information</legend>
+
+          <label for="fname">First Name*
+            <input type="text" id="fname" name="fname" required title="Applicant's First Name" autocomplete="given-name">
+          </label>
+
+          <label for="lname">Last Name*
+            <input type="text" id="lname" name="lname" required title="Applicant's Last Name" autocomplete="family-name">
+          </label>
+
+          <label for="orgtitle">Organizational Title*
+            <input type="text" id="orgtitle" name="orgtitle" title="Applicant's Organizational Title" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{2,}" required>
+          </label>
+
+          <label for="email">Email*
+            <input type="email" id="email" name="email" required title="Applicant's Email Address" autocomplete="email" placeholder="name@example.com">
+          </label>
+
+          <label for="phone">Mobile Phone*
+            <input type="tel" id="phone" name="phone" required title="Applicant's Mobile Phone Number" autocomplete="tel">
+          </label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Business Information</legend>
+
+          <label for="bizname">Business/Organization Name*
+            <input type="text" id="bizname" name="bizname" required title="Business or Organization Name" autocomplete="organization">
+          </label>
+
+          <label for="membership">Membership Level Selection
+            <select id="membership" name="membership" title="Select your desired membership level">
+              <option value="">Please Select &#9662;</option>
+              <option value="np">NP Membership (No Fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="description">Business/Organization Description
+            <textarea id="description" name="description" title="Describe your business or organization" rows="5"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+        </fieldset>
+
+        <input type="submit" value="Apply for Membership" class="submit-button">
+
+      </form>
+    </section>
+
+    <section class="membership-levels-display">
+      <h2>Membership Levels & Benefits</h2>
+      <div class="membership-cards-container">
+        <div class="membership-card np-member">
+          <h3>NP Membership</h3>
+          <p>For Non-Profit Organizations.</p>
+          <p class="price">No Fee</p>
+          <button class="modal-trigger" data-modal="npModal" aria-haspopup="dialog" aria-controls="npModal">Learn More</button>
+        </div>
+
+        <div class="membership-card bronze-member">
+          <h3>Bronze Membership</h3>
+          <p>Essential benefits to get started.</p>
+          <p class="price">$50/month</p>
+          <button class="modal-trigger" data-modal="bronzeModal" aria-haspopup="dialog" aria-controls="bronzeModal">Learn More</button>
+        </div>
+
+        <div class="membership-card silver-member">
+          <h3>Silver Membership</h3>
+          <p>Enhanced benefits for growing businesses.</p>
+          <p class="price">$100/month</p>
+          <button class="modal-trigger" data-modal="silverModal" aria-haspopup="dialog" aria-controls="silverModal">Learn More</button>
+        </div>
+
+        <div class="membership-card gold-member">
+          <h3>Gold Membership</h3>
+          <p>Premium access and maximum visibility.</p>
+          <p class="price">$250/month</p>
+          <button class="modal-trigger" data-modal="goldModal" aria-haspopup="dialog" aria-controls="goldModal">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals -->
+  <div id="npModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="npModal-title">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close">&times;</button>
+      <h3 id="npModal-title">NP Membership Benefits</h3>
+      <ul>
+        <li>Community support and networking.</li>
+        <li>Access to basic workshops.</li>
+        <li>Listing in the online directory.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="bronzeModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="bronzeModal-title">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close">&times;</button>
+      <h3 id="bronzeModal-title">Bronze Membership Benefits</h3>
+      <ul>
+        <li>All NP benefits.</li>
+        <li>Discounted event tickets.</li>
+        <li>Eligibility for Chamber awards.</li>
+        <li>Basic business listing with logo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="silverModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="silverModal-title">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close">&times;</button>
+      <h3 id="silverModal-title">Silver Membership Benefits</h3>
+      <ul>
+        <li>All Bronze benefits.</li>
+        <li>Priority event registration.</li>
+        <li>Opportunities to host Chamber events.</li>
+        <li>Enhanced business listing with detailed profile.</li>
+        <li>Access to exclusive training sessions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="goldModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="goldModal-title">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close">&times;</button>
+      <h3 id="goldModal-title">Gold Membership Benefits</h3>
+      <ul>
+        <li>All Silver benefits.</li>
+        <li>Prominent spotlight position on homepage.</li>
+        <li>Dedicated advertising opportunities.</li>
+        <li>Exclusive invitation to leadership roundtables.</li>
+        <li>Free attendance to all Chamber events.</li>
+        <li>Premium business listing and marketing support.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Dennis Arturo Guevara Chete | New Jersey, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script defer src="scripts/global.js"></script>
+  <script defer src="scripts/join.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Local Bistro & Cafe",
+    "address": "123 Main Street, Anytown, USA 12345",
+    "phone": "555-123-4567",
+    "website": "https://www.localbistro.com",
+    "image": "bistro-logo.webp",
+    "membershipLevel": "Gold",
+    "description": "Your cozy spot for delicious food and great coffee.",
+    "joinedDate": "2022-03-15"
+  },
+  {
+    "name": "Tech Solutions Inc.",
+    "address": "456 Tech Avenue, Anytown, USA 12345",
+    "phone": "555-987-6543",
+    "website": "https://www.techsolutions.com",
+    "image": "tech-solutions-logo.webp",
+    "membershipLevel": "Silver",
+    "description": "Innovative IT services for businesses of all sizes.",
+    "joinedDate": "2023-01-20"
+  },
+  {
+    "name": "Green Thumb Nursery",
+    "address": "789 Garden Lane, Anytown, USA 12345",
+    "phone": "555-222-3333",
+    "website": "https://www.greenthumbnursery.com",
+    "image": "greenthumb-logo.webp",
+    "membershipLevel": "Bronze",
+    "description": "Quality plants and gardening supplies for your home.",
+    "joinedDate": "2021-06-01"
+  },
+  {
+    "name": "Peak Fitness Gym",
+    "address": "101 Workout Blvd, Anytown, USA 12345",
+    "phone": "555-444-5555",
+    "website": "https://www.peakfitness.com",
+    "image": "peakfitness-logo.webp",
+    "membershipLevel": "Gold",
+    "description": "Achieve your fitness goals with state-of-the-art equipment.",
+    "joinedDate": "2020-11-10"
+  },
+  {
+    "name": "Artisan Bakery",
+    "address": "202 Bread Street, Anytown, USA 12345",
+    "phone": "555-666-7777",
+    "website": "https://www.artisanbakery.com",
+    "image": "bakery-logo.webp",
+    "membershipLevel": "Silver",
+    "description": "Handcrafted breads, pastries, and custom cakes.",
+    "joinedDate": "2023-04-25"
+  },
+  {
+    "name": "Reliable Plumbing Services",
+    "address": "303 Pipe Road, Anytown, USA 12345",
+    "phone": "555-888-9999",
+    "website": "https://www.reliableplumbing.com",
+    "image": "plumbing-logo.webp",
+    "membershipLevel": "Bronze",
+    "description": "Your trusted source for all plumbing needs.",
+    "joinedDate": "2022-09-01"
+  },
+  {
+    "name": "Bright Minds Tutoring",
+    "address": "404 Study Lane, Anytown, USA 12345",
+    "phone": "555-111-2222",
+    "website": "https://www.brightmindstutoring.com",
+    "image": "tutoring-logo.webp",
+    "membershipLevel": "Gold",
+    "description": "Personalized tutoring to help students succeed.",
+    "joinedDate": "2024-02-14"
+  }
+]

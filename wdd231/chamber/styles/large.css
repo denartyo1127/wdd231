@@ -1,0 +1,222 @@
+@media (min-width: 768px) { 
+    header .header-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    .main-nav {
+        padding: 0;
+    }
+
+    .main-nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+    }
+
+    .main-nav ul li {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a {
+        padding: 1rem 1.5rem;
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    /* Directory layout */
+    #member-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    #member-cards-container.grid-view .member-card {
+        display: block;
+        text-align: center;
+    }
+
+    #member-cards-container.grid-view .member-list-item {
+        display: none;
+    }
+
+    #member-cards-container.list-view {
+        grid-template-columns: 1fr;
+    }
+
+    #member-cards-container.list-view .member-list-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #eee;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .member-list-item h3 {
+        flex-basis: 20%;
+    }
+    .member-list-item p {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    .member-list-item a {
+        white-space: nowrap;
+    }
+
+    /* Membership form on larger screens */
+    .membership-form-section form fieldset {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Membership cards layout upgrade for large screens */
+    .membership-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Homepage */
+    .home-main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-width: 30%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .hero-text {
+        flex: 1;
+        padding: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.8em;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1em;
+    }
+
+    .spotlight-grid, .event-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .event-card, .spotlight-card {
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    .weather-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-section #weather-display {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .current-weather {
+        flex: 1;
+        text-align: center;
+    }
+    .forecast-container {
+        flex: 2;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+/* Discover page layout for large screens */
+.discover-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.cards .card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.cards .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

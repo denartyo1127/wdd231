@@ -1,0 +1,59 @@
+[
+  {
+    "name": "City Park",
+    "address": "123 Main St",
+    "description": "A beautiful park with walking trails, playgrounds, and picnic areas.",
+    "image": "images/city-park.webp"
+  },
+  {
+    "name": "Historic Museum",
+    "address": "456 History Ave",
+    "description": "Discover the rich history of our town with exhibits dating back to the 1800s.",
+    "image": "images/museum.webp"
+  }, 
+    {
+        "name": "Local Library",
+        "address": "789 Book St",
+        "description": "A quiet place to read, study, and borrow books from a vast collection.",
+        "image": "images/library.webp"
+    },
+    {
+        "name": "Art Gallery",
+        "address": "321 Art Blvd",
+        "description": "Featuring local artists and rotating exhibitions of contemporary art.",
+        "image": "images/art-gallery.webp"
+    },
+    {
+        "name": "Community Center",
+        "address": "654 Community Rd",
+        "description": "A hub for local events, classes, and gatherings.",
+        "image": "images/community-center.webp"
+    },
+    {
+        "name": "Botanical Garden",
+        "address": "987 Greenway Dr",
+        "description": "A serene garden showcasing a variety of plants and flowers.",
+        "image": "images/botanical-garden.webp"
+    },
+    {
+        "name": "Sports Complex",
+        "address": "159 Sports St",
+        "description": "Facilities for various sports including basketball, tennis, and swimming.",
+        "image": "images/sports-complex.webp"
+    },
+    {
+        "name": "Music Hall",
+        "address": "753 Melody Ln",
+        "description": "A venue for concerts, performances, and music events.",
+        "image": "images/music-hall.webp"
+    },
+    {
+        "name": "Cultural Center",
+        "address": "852 Culture Way",
+        "description": "Promoting cultural diversity through events, workshops, and exhibitions.",
+        "image": "images/cultural-center.webp"
+    }
+
+
+]
+    
