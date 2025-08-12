@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Guevara Auto Service | Appointment Submitted</title>
+  <meta name="description" content="Appointment submission confirmation for Guevara Auto Service.">
+  <meta name="author" content="Dennis Guevara">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container" style="padding:2rem">
+    <h2>Form Submission</h2>
+    <p>Below are the details you submitted. This page demonstrates the form handling requirement.</p>
+    <div id="submission"></div>
+    <a href="index.html" class="btn btn-outline">Return Home</a>
+  </main>
+
+  <script>
+    // parse query string (GET method used)
+    const params = new URLSearchParams(window.location.search);
+    const out = document.getElementById('submission');
+    if (!params.toString()) {
+      out.innerHTML = '<p>No form data found. Try submitting the contact form.</p>';
+    } else {
+      const entries = Array.from(params.entries()).map(([k,v]) => `<li><strong>${k}:</strong> ${v || '(empty)'}</li>`).join('');
+      out.innerHTML = `<ul>${entries}</ul>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Guevara Auto Service | Services</title>
+  <meta name="description" content="Full list of Guevara Auto Service's repair & maintenance services, pricing and booking.">
+  <meta name="author" content="Dennis Guevara">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Guevara Auto Service - Services">
+  <meta property="og:description" content="See all our auto repair services and pricing.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/favicon.ico" alt="" style="width:36px;height:36px">
+        <h1>Guevara Auto Service</h1>
+      </div>
+      <nav aria-label="Main navigation">
+        <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <div class="navlinks" role="navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="mobile-menu container" style="display:none"></div>
+  </header>
+
+  <main class="container" style="padding-top:1rem">
+    <h2 style="font-family:'Oswald',sans-serif">Our Services</h2>
+    <p class="muted">Click a service for more details. Use the star to favorite services for later.</p>
+
+    <section id="services-container" class="services-grid" aria-live="polite">
+      <!-- content populated by JS from /data/services.json -->
+    </section>
+  </main>
+
+  <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true">
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="close" aria-label="Close dialog">✕</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>&copy; 2025 Guevara Auto Service • Bergenfield, NJ</div>
+      <div class="footer-links">
+        <a href="https://youtu.be/REPLACE_WITH_YOUR_VIDEO" style="color:var(--yellow)">Demo Video</a> &nbsp;|&nbsp;
+        <a href="attributions.html" style="color:var(--yellow)">Attributions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

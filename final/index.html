@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Guevara Auto Service | Home</title>
+  <meta name="description" content="Guevara Auto Service - reliable auto repair & maintenance in Bergenfield, NJ. Book appointments online.">
+  <meta name="author" content="Dennis Guevara">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guevara Auto Service">
+  <meta property="og:description" content="Reliable auto repair & maintenance in Bergenfield, NJ. Book appointments online.">
+  <meta property="og:image" content="/images/hero.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/favicon.ico" alt="" style="width:36px;height:36px">
+        <h1>Guevara Auto Service</h1>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <div class="navlinks" role="navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu container" style="display:none"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Your Trusted Automotive Expert</h2>
+        <p>Serving Bergenfield, NJ — engine diagnostics, brakes, transmission, and more. Expert techs, honest prices.</p>
+        <a class="btn btn-primary" href="services.html">View Services</a>
+        <a class="btn btn-outline" href="contact.html">Book Appointment</a>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="featured-heading" style="padding:1rem 0">
+      <h3 id="featured-heading" style="font-family:'Oswald',sans-serif">Featured Services</h3>
+      <div id="services-preview" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem">
+        <!-- We'll show three from the data via JS when desired.
+             To keep home lightweight we do not fetch all 15 here; the services page does the full fetch. -->
+        <article class="service-card" style="align-items:center">
+          <div style="flex:1">
+            <h4 style="margin:0">Oil Change</h4>
+            <p style="margin:.5rem 0;color:var(--muted)">Fast full synthetic oil change.</p>
+          </div>
+          <div style="flex:0 0 80px"><img src="images/service-1.jpg" alt="" style="width:80px;height:56px;object-fit:cover" loading="lazy"></div>
+        </article>
+
+        <article class="service-card" style="align-items:center">
+          <div style="flex:1">
+            <h4 style="margin:0">Brake Repair</h4>
+            <p style="margin:.5rem 0;color:var(--muted)">Pads, rotors and brake fluid service.</p>
+          </div>
+          <div style="flex:0 0 80px"><img src="images/service-2.jpg" alt="" style="width:80px;height:56px;object-fit:cover" loading="lazy"></div>
+        </article>
+
+        <article class="service-card" style="align-items:center">
+          <div style="flex:1">
+            <h4 style="margin:0">Engine Diagnostic</h4>
+            <p style="margin:.5rem 0;color:var(--muted)">Check engine light scanning & reporting.</p>
+          </div>
+          <div style="flex:0 0 80px"><img src="images/service-6.jpg" alt="" style="width:80px;height:56px;object-fit:cover" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true">
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="close" aria-label="Close dialog">✕</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+<footer>
+    <div class="container">
+      <div>&copy; 2025 Guevara Auto Service • Bergenfield, NJ</div>
+      <div class="footer-links">
+        <a href="form-action.html" style="color:var(--yellow)">Demo Video</a> &nbsp;|&nbsp;
+        <a href="attributions.html" style="color:var(--yellow)">Attributions</a>
+      </div>
+    </div>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module">
+    // Mobile menu population to satisfy responsive nav (wayfinding)
+    import { navSetup } from './scripts/nav.js';
+    navSetup();
+    // render a tiny mobile menu copy
+    const menu = document.getElementById('mobile-menu');
+    if(menu){
+      menu.innerHTML = '<a href=\"index.html\">Home</a><a href=\"services.html\">Services</a><a href=\"contact.html\">Contact</a>';
+    }
+  </script>
+  <script>
+  const lastModifiedRaw = new Date(document.lastModified);
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  };
+  const formattedDate = lastModifiedRaw.toLocaleString('en-US', options);
+  document.getElementById("lastModified").textContent = `Last Modified: ${formattedDate}`;
+</script>
+</body>
+</html>
